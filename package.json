@@ -1,7 +1,6 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js"
@@ -17,5 +16,15 @@
     "express": "^4.18.2",
     "node-localstorage": "^2.2.1",
     "nodemon": "^2.0.22"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmurphy20-CVTC/npi_registry_backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cmurphy20-CVTC/npi_registry_backend/issues"
+  },
+  "homepage": "https://github.com/cmurphy20-CVTC/npi_registry_backend#readme",
+  "description": ""
 }
