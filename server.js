@@ -59,10 +59,8 @@ app.get("/registryResults", function(req, res) {
 })
 
 let port = 5000;
-if (port == null || port == "") {
-  port = `0.0.0.0:$PORT`;
-}
 
-app.listen(port, function() {
+
+app.listen(port, "0.0.0.0", function() {
   console.log("Server has started successfully ");
 });
