@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 app.get("/", function(req, res){
 
-    res.render("index");
+    res.send("Server is running");
     
 })
 
