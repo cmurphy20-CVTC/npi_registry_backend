@@ -58,7 +58,7 @@ app.get("/registryResults", function(req, res) {
   
 })
 
-let port = 5000;
+let port = process.env.PORT || 3000;
 
 
 app.listen(port, "0.0.0.0", function() {
