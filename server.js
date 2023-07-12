@@ -59,8 +59,10 @@ app.get("/registryResults", function(req, res) {
 })
 
 let port = process.env.PORT || 3000;
+if (port == null || port == "") {
+  port = `0.0.0.0:$PORT`;
+}
 
-
-app.listen(port, "0.0.0.0", function() {
+app.listen(port, function() {
   console.log("Server has started successfully ");
 });
