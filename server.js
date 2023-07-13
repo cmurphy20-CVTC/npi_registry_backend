@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const axios = require("axios");
@@ -16,7 +17,7 @@ app.use(bodyParser.json());
 
 app.get("/", function(req, res){
 
-    res.send("Server is running");
+    res.send("Serving is running");
     
 })
 
@@ -30,7 +31,7 @@ app.post("/registrySearch", function(req, res){
   const state = req.body.state;
   const zip_code = req.body.zipCode;
 
-  const url = "https://npiregistry.cms.hhs.gov/api/?number=" + npiNumber + "&enumeration_type=&taxonomy_description=" + taxonomy_description + "&name_purpose=&first_name=" + first_name + "&last_name=" + last_name + "&organization_name=&city=" + city + "&state=" + state +"&postal_code=" + zip_code + "&country_code=US&limit=50&skip=&pretty=&version=2.1";
+  const url = "https://npiregistry.cms.hhs.gov/api/?number=" + npiNumber + "&enumeration_type=&taxonomy_description=" + taxonomy_description + "&name_purpose=&first_name=" + first_name + "&last_name=" + last_name + "&organization_name=&city=" + city + "&state=" + state +"&postal_code=" + zip_code + "&country_code=US&limit=5&skip=&pretty=&version=2.1";
 
   localStorage.setItem("searchURL", url);
 
@@ -58,7 +59,7 @@ app.get("/registryResults", function(req, res) {
   
 })
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 5000;
 if (port == null || port == "") {
   port = `0.0.0.0:$PORT`;
 }
