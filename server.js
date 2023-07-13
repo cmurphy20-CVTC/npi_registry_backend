@@ -64,6 +64,6 @@ if (port == null || port == "") {
   port = `0.0.0.0:$PORT`;
 }
 
-app.listen(port, function() {
+app.listen(port, "0.0.0.0",function() {
   console.log("Server has started successfully ");
 });
