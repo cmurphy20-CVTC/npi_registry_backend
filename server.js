@@ -31,7 +31,7 @@ app.post("/registrySearch", function(req, res){
   const state = req.body.state;
   const zip_code = req.body.zipCode;
 
-  const url = "https://npiregistry.cms.hhs.gov/api/?number=" + npiNumber + "&enumeration_type=&taxonomy_description=" + taxonomy_description + "&name_purpose=&first_name=" + first_name + "&last_name=" + last_name + "&organization_name=&city=" + city + "&state=" + state +"&postal_code=" + zip_code + "&country_code=US&limit=5&skip=&pretty=&version=2.1";
+  const url = "https://npiregistry.cms.hhs.gov/api/?number=" + npiNumber + "&enumeration_type=&taxonomy_description=" + taxonomy_description + "&name_purpose=&first_name=" + first_name + "&last_name=" + last_name + "&organization_name=&city=" + city + "&state=" + state +"&postal_code=" + zip_code + "&country_code=US&limit=50&skip=&pretty=&version=2.1";
 
   localStorage.setItem("searchURL", url);
 
