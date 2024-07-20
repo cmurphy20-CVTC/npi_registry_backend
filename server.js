@@ -54,8 +54,6 @@ app.get("/registryResults", function(req, res) {
     console.log(error)
 
   })
-
-  
   
 })
 
